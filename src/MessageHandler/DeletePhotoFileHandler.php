@@ -9,11 +9,7 @@ use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 #[AsMessageHandler]
 class DeletePhotoFileHandler
 {
-    private $photoManager;
-
-    public function __construct(PhotoFileManager $photoManager) {
-        $this->photoManager = $photoManager;
-    }
+    public function __construct(private PhotoFileManager $photoManager){}
 
     public function __invoke(DeletePhotoFile $deletePhotoFile)
     {

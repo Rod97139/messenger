@@ -10,16 +10,8 @@ use Symfony\Component\Finder\Finder;
 
 class PhotoPonkaficator
 {
-    private $entityManager;
-    private $imageManager;
-    private $photoFilesystem;
-
-    public function __construct(EntityManagerInterface $entityManager, ImageManager $imageManager, Filesystem $photoFilesystem)
-    {
-        $this->entityManager = $entityManager;
-        $this->imageManager = $imageManager;
-        $this->photoFilesystem = $photoFilesystem;
-    }
+    public function __construct(private EntityManagerInterface $entityManager,private ImageManager $imageManager, private Filesystem $photoFilesystem)
+    {}
 
     public function ponkafy(string $imageContents): string
     {

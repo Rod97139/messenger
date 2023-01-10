@@ -12,3 +12,7 @@
 
 `./bin/console messenger:failed:retry --transport=failed -vv` || `./bin/console messenger:failed:retry --transport=failed -vv --force` ==> retry
 
+`./bin/console debug:container messenger_audit` ==> information for service (monolog.yaml) 
+
+
+

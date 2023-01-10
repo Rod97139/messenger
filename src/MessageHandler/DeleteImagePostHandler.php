@@ -14,16 +14,10 @@ use Symfony\Component\Messenger\MessageBusInterface;
 #[AsMessageHandler] // instead of implements MessageHandlerInterface
 class DeleteImagePostHandler
 {
-    
-    private $messageBus;
-    private $entityManager;
-
-    public function __construct(MessageBusInterface $messageBus, EntityManagerInterface $entityManager) {
-        
-        $this->messageBus = $messageBus;
-        $this->entityManager = $entityManager;
-
-    }
+    public function __construct(
+        private MessageBusInterface $messageBus,
+        private EntityManagerInterface $entityManager
+        ) {}
 
     public function __invoke(DeleteImagePost $deleteImagePost)
     {

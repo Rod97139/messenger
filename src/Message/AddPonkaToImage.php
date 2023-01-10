@@ -5,11 +5,7 @@ namespace App\Message;
 
 class AddPonkaToImage
 {
-    private $imagePostId;
-
-    public function __construct(int $imagePostId) {
-        $this->imagePostId = $imagePostId;
-    }
+    public function __construct(private int $imagePostId){}
 
     public function getImagePostId(): int
     {
