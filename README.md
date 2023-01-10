@@ -8,5 +8,7 @@
 
 `./bin/console messenger:failed:show` ==> show failed message
 
+`php bin/console debug:container --show-arguments debug.traced.messenger.bus.default.inner` ==> show middlewares
+
 `./bin/console messenger:failed:retry --transport=failed -vv` || `./bin/console messenger:failed:retry --transport=failed -vv --force` ==> retry
 
