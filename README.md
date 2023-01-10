@@ -14,5 +14,9 @@
 
 `./bin/console debug:container messenger_audit` ==> information for service (monolog.yaml) 
 
+`touch var/log/messenger.log` ==> create messenger.log
+
+`tail -f var/log/messenger.log` ==> run messenger.log
+
 
 

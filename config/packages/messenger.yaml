@@ -18,6 +18,10 @@ framework:
                     delay: 500
                     max_retries: 3
                     multiplier: 2
+            async_priority_high:
+                dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
+                options:
+                    queue_name: high
             failed: 'doctrine://default?queue_name=failed'
             # sync: 'sync://'
 
@@ -27,5 +31,12 @@ framework:
             Symfony\Component\Notifier\Message\SmsMessage: async
 
             # Route your messages to the transports
-            'App\Message\AddPonkaToImage': async
+            'App\Message\AddPonkaToImage': async_priority_high
             'App\Message\DeletePhotoFile': async
+
+when@dev:
+    framework:
+        messenger:
+            # transports:
+            #     async: 'sync://'
+            #     async_priority_high: 'sync://'
