@@ -40,3 +40,10 @@ when@dev:
             # transports:
             #     async: 'sync://'
             #     async_priority_high: 'sync://'
+
+when@test:
+    framework:
+        messenger:
+            transports:
+                async: 'in_memory://'
+                async_priority_high: 'in_memory://'

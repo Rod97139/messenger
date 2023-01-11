@@ -1,6 +1,6 @@
 ## 
 
-`./bin/console messenger:consume -vv` || `./bin/console messenger:consume -vv async` ==> consume messages (worker)
+`./bin/console messenger:consume -vv` || `./bin/console messenger:consume -vv async_priority_high async` ==> consume messages (worker)
 
 `./bin/console config:dump framework messenger` ==> exemple config
 
