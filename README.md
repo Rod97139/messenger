@@ -20,7 +20,7 @@
 
 
 
-`sudo apt-get update
+```sudo apt-get update
 
 sudo apt-get install supervisor
 
@@ -40,6 +40,6 @@ ls /etc/supervisor/conf.d/
 
 ls -la /etc/supervisor/conf.d/
 
-`
+sudo nano /etc/supervisor/conf.d/```
 
  

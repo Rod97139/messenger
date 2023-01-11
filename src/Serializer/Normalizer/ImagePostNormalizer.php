@@ -45,6 +45,7 @@ class ImagePostNormalizer implements NormalizerInterface, CacheableSupportsMetho
         return $data;
     }
 
+    
     public function supportsNormalization($data, $format = null, $context = null): bool
     {
         return $data instanceof ImagePost;
