@@ -20,3 +20,26 @@
 
 
 
+`sudo apt-get update
+
+sudo apt-get install supervisor
+
+supervisord -v
+
+sudo service supervisor start
+
+sudo service supervisor status
+
+sudo service supervisor stop
+
+cd /etc/supervisor/
+
+sudo ln -s ~/Desktop/messenger/config/messenger-worker.ini /etc/supervisor/conf.d
+ 
+ls /etc/supervisor/conf.d/
+
+ls -la /etc/supervisor/conf.d/
+
+`
+
+ 
